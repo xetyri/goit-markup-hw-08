@@ -1,0 +1,12 @@
+.section {
+  padding-bottom: var(--section-pad);
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    color: var(--color-title);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
