@@ -1,20 +1,42 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--color-secondary);
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &-container {
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-evenly;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-bottom: 0;
+    }
   }
 
   &__wrapper {
-    width: 231px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
 
   &__wrapper-messenger {
-    margin-left: 70px;
-    width: 206px;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &-suptitle {
@@ -23,22 +45,33 @@
   }
 
   &__wrapper-button {
-    width: 570px;
-    margin-left: 93px;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+    }
   }
 }
 
 .address {
-  margin-top: 20px;
   font-style: normal;
-  width: 231px;
-  height: 81px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
   &-list {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
     &__item {
       justify-content: center;
       align-items: center;
       height: 21px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+      }
 
       &:not(:last-child) {
         margin-bottom: 9px;
@@ -73,13 +106,20 @@
 
 .messenger-list {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
   }
 
   &__link {
@@ -102,21 +142,41 @@
 }
 
 .form-signup {
-  display: flex;
-  align-items: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+
+  &__subtitle {
+    display: block;
+  }
 
   &__email {
-    width: 358px;
-    height: 50px;
+    padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: var(--color-secondary);
     color: var(--color-main);
     line-height: 1.25;
-    padding: 15px 16px;
-    margin-right: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: block;
+
+      width: 450px;
+      margin: 0 auto 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.6);
@@ -124,9 +184,10 @@
   }
 
   &__btn {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    padding: 10px 28px 10px 29px;
   }
 
   &__svg-color {

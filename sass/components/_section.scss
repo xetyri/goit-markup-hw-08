@@ -1,12 +1,24 @@
 .section {
-  padding-bottom: var(--section-pad);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: var(--section-pad);
+    padding-bottom: var(--section-pad);
+  }
 
   &__title {
+    margin-bottom: 30px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    color: var(--color-title);
-    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
+    color: var(--color-title);
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
+    }
   }
 }

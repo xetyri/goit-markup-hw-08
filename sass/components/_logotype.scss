@@ -1,20 +1,34 @@
 .logotype {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  margin-right: 93px;
+  font-size: 24px;
+  line-height: 1.16;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
+  }
 
   &_theme {
     &_light {
       color: var(--color-logo);
-      padding-top: 24px;
-      padding-bottom: 25px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
     &_dark {
       color: var(--color-main);
       margin-bottom: 25px;
       margin-top: 25px;
+      align-items: center;
+      @media screen and (min-width: 768px) {
+        margin: auto;
+        margin-bottom: 25px;
+      }
     }
   }
   &__accent-text {

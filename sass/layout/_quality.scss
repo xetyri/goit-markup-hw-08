@@ -1,32 +1,45 @@
 .quality {
-  padding-top: var(--section-pad);
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 47px;
   }
-
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -30px;
+      margin-left: -30px;
+    }
+  }
   &__item {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      margin-left: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 4 * 30px) / 4);
+    }
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   &__block-icon {
-    width: 270px;
     height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
     background-color: var(--color-team);
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
   }
 
   &__suptitle {
     margin-bottom: 10px;
     color: var(--color-title);
+    @media screen and (max-width: 1199px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
