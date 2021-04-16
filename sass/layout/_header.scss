@@ -169,11 +169,14 @@
 
     &__link {
       color: var(--color-subtext);
-
       &__active {
         font-size: 34px;
         line-height: 1.18;
         color: var(--accent-color);
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
     }
   }
