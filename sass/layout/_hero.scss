@@ -1,7 +1,5 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
+  height: 400px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -9,6 +7,7 @@
     url(../images/main/mobile/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   margin-right: auto;
   margin-left: auto;
 
@@ -24,8 +23,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 768px;
-
     background-image: linear-gradient(
         to bottom,
         rgba(47, 48, 58, 0.4),
@@ -47,7 +44,7 @@
 
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
-
+    height: 600px;
     background-image: linear-gradient(
         to bottom,
         rgba(47, 48, 58, 0.4),
@@ -72,7 +69,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 44px;
+
+    text-align: center;
+    padding: 118px 44px;
 
     @media screen and (min-width: 768px) {
       padding-left: 204px;
@@ -86,7 +85,6 @@
 
   &__title {
     margin-bottom: 30px;
-
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;

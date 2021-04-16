@@ -85,11 +85,19 @@
   &__check-desc {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
     font-size: 12px;
     letter-spacing: 0.02em;
     color: var(--color-subtext);
 
+    @media screen and (max-width: 470px) {
+      letter-spacing: 0.001em;
+      font-size: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     @media screen and (min-width: 1200px) {
       font-size: 14px;
       line-height: 1.71;
